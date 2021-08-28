@@ -30,15 +30,6 @@ async function postData(event) {
         yCoordinate:parseInt(yCoordinate)
     }
     
-    //    await fetch(`${API_URL}/api/createcr`, {
-    //     method: 'POST', 
-    //     body: JSON.stringify(data),
-    //     headers:{
-    //       'Content-Type': 'application/json'
-    //     }
-    //   }).then(res => console.log(res))
-    //   .then(response => console.log(response));
-
     axios({
         method: 'POST',
         url:`${API_URL}/api/createcr`,
