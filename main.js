@@ -42,5 +42,22 @@ async function postData(event) {
     })
   }
 
+  async function addMaterials(){
+      const materialDrop = document.getElementById("inputGroupSelect02")
+      const materialSelected = materialDrop.options[materialDrop.selectedIndex].text
+      const materialQuantity = document.getElementById("cantidadMaterial").value;
+      const data = {
+          materialName: materialSelected,
+          quantity: parseInt(materialQuantity)
+      }
+      axios({
+        method: 'PUT',
+        url:`${API_URL}/api/addmaterial`,
+        data:data
+    }).then(res=>{
+      alert(res.data)
+  })
+  }
+
 
 

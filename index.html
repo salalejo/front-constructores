@@ -52,17 +52,56 @@
         
               <!-- cabecera del diálogo -->
               <div class="modal-header">
-                <h4 class="modal-title">Título del diálogo</h4>
+                <h4 class="modal-title">Reporte</h4>
                 <button type="button" class="close" data-dismiss="modal">X</button>
               </div>
         
               <!-- cuerpo del diálogo -->
               <div class="modal-body" id="modalisimo">
-                Contenido del diálogo.
+                
               </div>
         
               <!-- pie del diálogo -->
               <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+              </div>
+        
+            </div>
+          </div>
+        </div> 
+        <button onclick="showReport()" type="button" class="btn btn-primary" data-toggle="modal" data-target="#dialogo2">Añadir materiales</button>
+    
+        <div class="modal fade" id="dialogo2">
+          <div class="modal-dialog">
+            <div class="modal-content">
+        
+              <!-- cabecera del diálogo -->
+              <div class="modal-header">
+                <h4 class="modal-title">Añadir Materiales</h4>
+                <button type="button" class="close" data-dismiss="modal">X</button>
+              </div>
+        
+              <!-- cuerpo del diálogo -->
+              <div class="modal-body" id="modalisimo">
+                <div class="input-group mb-3">
+                  <label class="input-group-text" for="inputGroupSelect02">Material</label>
+                  <select class="form-select" id="inputGroupSelect02" required>
+                      <option value="" selected disabled>--Selecciona el tipo de material--</option>
+                    <option value="0">Cemento</option>
+                    <option value="1">Grava</option>
+                    <option value="2">Arena</option>
+                    <option value="3">Madera</option>
+                    <option value="4">Adobe</option>
+                 
+                  </select>
+                </div>
+                <span class="input-group-text">Cantidad</span>
+                <input id="cantidadMaterial" type="number" class="form-control" placeholder="Ingresa la cantidad" aria-label="Server" min="0" required>
+              </div>
+        
+              <!-- pie del diálogo -->
+              <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="addMaterials()">Añadir Material</button>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
               </div>
         
