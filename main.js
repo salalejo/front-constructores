@@ -3,19 +3,6 @@ const API_URL= "https://constructores-sas.herokuapp.com"
 const HTMLResponse = document.querySelector("#app");
 
 
-function imprimirDatos(){
-    const constructionType = document.getElementById("inputGroupSelect01");
-    const selectedConstruction = constructionType.options[constructionType.selectedIndex].text
-    const xCoordinate = document.getElementById("coordenadaX").value;
-    const yCoordinate = document.getElementById("coordenadaY").value;
-    const data = {
-        constructionType:selectedConstruction,
-        xCoordinate:parseInt(xCoordinate),
-        yCoordinate:parseInt(yCoordinate)
-    }
-
-    alert(JSON.stringify(data))
-}
 
 async function postData(event) {
 
